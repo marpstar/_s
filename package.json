@@ -1,0 +1,24 @@
+{
+  "name": "_s",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
+  "main": "index.js",
+  "scripts": {
+    "autoprefixer": "postcss --use autoprefixer -o ./style.css ./style.css",
+    "build-css": "node-sass --include-path sass sass/style.scss ./style.css && npm run autoprefixer",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://csand@bitbucket.org/csand/merkle.git"
+  },
+  "author": "Cody Sand",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.3.7",
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.9.2",
+    "postcss-cli": "^2.5.2"
+  }
+}
